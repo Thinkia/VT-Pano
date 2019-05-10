@@ -1,0 +1,17 @@
+{
+    "describe": [
+        {
+            "name": "space1"
+        },
+        {
+            "name": "space2"
+        },
+        {
+            "name": "space3"
+        },
+        {
+            "name": "space4"
+        }
+    ],
+    "spaceNumber": 4
+}
