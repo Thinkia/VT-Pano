@@ -1,0 +1,60 @@
+<!DOCTYPE >
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>全景过渡测试</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+<script src="js/three.js"></script>
+<script type="text/javascript" src="js/OrbitControls.js"></script>
+<script type="text/javascript" src="js/Tween.js"></script>
+<script type="x-shader/x-vertex" id="vertexshader">
+
+        varying vec3 pos;
+
+        void main(void){
+
+        mat4 mvp = projectionMatrix * modelViewMatrix ;
+
+        pos = position.xyz;
+
+        // pos = vec3(-position.x,position.yz);
+
+        gl_Position  = mvp * vec4(pos,1.0);
+
+        }
+
+</script>
+<script type="x-shader/x-fragment" id="fragmentshader">
+
+
+        varying vec3 pos;
+
+        uniform samplerCube U_MainTexture;
+
+        uniform float alpha;
+
+        void main(void){
+
+            gl_FragColor =  vec4(textureCube(U_MainTexture,pos).rgb,alpha);//取观察点到面 的向量
+
+      }
+
+</script>
+
+<script type="text/javascript" src="pano.js"></script>
+
+<div id="WebGL-output"></div>
+
+</body>
+
+</html>
