@@ -50,7 +50,9 @@
  let uniforms2;
  let cubeText;
 
- let path = './large-model/space4/512/', format='.jpg';
+ let path  = './large-model/space4/512/', format='.jpg';
+
+ let path2 ='./large-model/space4/1k/'
 
  let cubeLen = 6;
 
@@ -80,9 +82,9 @@
      cubeText = loader.load(
 
          [
-             path + '512_001_5_00' + format, path + '512_001_3_00' + format,
-             path + '512_001_1_00' + format, path + '512_001_6_00' + format,
-             path + '512_001_2_00' + format, path + '512_001_4_00' + format,
+             path2 + '001_5' + format, path2 + '001_3' + format,
+             path2 + '001_1' + format, path2 + '001_6' + format,
+             path2 + '001_2' + format, path2 + '001_4' + format,
          ]
 
      );
@@ -124,82 +126,6 @@
          });
 
      let cube = new THREE.Mesh(cubeGeo, shaderMaterial);
-
-/*
-
-     let vertices = [];
-
-     // front
-     vertices[vertices.length]  =  new THREE.Vector3(-len,len,len);
-     vertices[vertices.length]  =  new THREE.Vector3(0,len,len);
-     vertices[vertices.length]  =  new THREE.Vector3(len,len,len);
-     vertices[vertices.length]  =  new THREE.Vector3(-len,0,len);
-     vertices[vertices.length]  =  new THREE.Vector3(0,0,len);
-     vertices[vertices.length]  =  new THREE.Vector3(len,0,len);
-     vertices[vertices.length]  =  new THREE.Vector3(-len,-len,len);
-     vertices[vertices.length]  =  new THREE.Vector3(0,-len,len);
-     vertices[vertices.length]  =  new THREE.Vector3(len,-len,len);
-
-     //mid
-     vertices[vertices.length]  =  new THREE.Vector3(-len,len,0);
-     vertices[vertices.length]  =  new THREE.Vector3(0,len,0);
-     vertices[vertices.length]  =  new THREE.Vector3(len,len,0);
-     vertices[vertices.length]  =  new THREE.Vector3(-len,0,0);
-     vertices[vertices.length]  =  new THREE.Vector3(0,0,0);
-     vertices[vertices.length]  =  new THREE.Vector3(len,0,0);
-     vertices[vertices.length]  =  new THREE.Vector3(-len,-len,0);
-     vertices[vertices.length]  =  new THREE.Vector3(0,-len,0);
-     vertices[vertices.length]  =  new THREE.Vector3(len,-len,0);
-
-     // bot
-     vertices[vertices.length]  =  new THREE.Vector3(-len,len,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(0,len,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(len,len,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(-len,0,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(0,0,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(len,0,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(-len,-len,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(0,-len,-len);
-     vertices[vertices.length]  =  new THREE.Vector3(len,-len,-len);
-
-     cube.geometry.vertices = vertices;
-
-     let faces = [];
-     //front
-     faces[faces.length] = new THREE.Face3(0,6,8 );
-     faces[faces.length] = new THREE.Face3(0,8,2 );
-
-     // back
-     faces[faces.length] = new THREE.Face3(26,24,18 );
-     faces[faces.length] = new THREE.Face3(26,18,20 );
-
-     //left
-     faces[faces.length] = new THREE.Face3(18,24,0 );
-     faces[faces.length] = new THREE.Face3(24, 6, 0 );
-
-     // right
-     faces[faces.length] = new THREE.Face3(2,8,26 );
-     faces[faces.length] = new THREE.Face3(2,26,20 );
-
-     // top
-     faces[faces.length] = new THREE.Face3(18,0,2 );
-     faces[faces.length] = new THREE.Face3(18,2,20 );
-
-     //bot
-     faces[faces.length] = new THREE.Face3(24,26,8 );
-     faces[faces.length] = new THREE.Face3(8,6,24 );*/
-
-     //front
-
-  /*   faces[faces.length] = new THREE.Face3(0,3,4 );
-     faces[faces.length] = new THREE.Face3(0,4,1 );
-     faces[faces.length] = new THREE.Face3(1,4,5 );
-     faces[faces.length] = new THREE.Face3(1,5,2 );
-
-     faces[faces.length] = new THREE.Face3(3,6,7 );
-     faces[faces.length] = new THREE.Face3(3,7,4 );
-     faces[faces.length] = new THREE.Face3(4,7,8 );
-     faces[faces.length] = new THREE.Face3(4,8,5 );*/
 
 
      let cube2 = new THREE.Mesh(cubeGeo2, shaderMaterial2);
@@ -252,35 +178,16 @@
              targetName = intersects[0].object.userData.num;
 
 
-            /*       mat4.lookAt( curPos,targetPos,up );
-
-
-             quat.setFromRotationMatrix( mat4  );
-
-             if(camera.quaternion.y*quat.y<0){
-                 quat.x = -quat.x;
-                 quat.y = -quat.y;
-                 quat.z = -quat.z;
-                 quat.w = -quat.w;
-             }
-
-             new TWEEN.Tween( camera.quaternion )
-                 .to({
-                     x:quat.x,
-                     y:quat.y,
-                     z:quat.z,
-                     w:quat.w
-                 },1000)
-                 .easing(TWEEN.Easing.Linear.None)
-                 .start();*/
-
-
 
               loader.load(
                 [
-                    path + '512_'+targetName+'_5_00' + format, path + '512_'+targetName+'_3_00' + format,
+                  /*  path + '512_'+targetName+'_5_00' + format, path + '512_'+targetName+'_3_00' + format,
                     path + '512_'+targetName+'_1_00' + format, path + '512_'+targetName+'_6_00' + format,
                     path + '512_'+targetName+'_2_00' + format, path + '512_'+targetName+'_4_00' + format,
+*/
+                    path2 + targetName+'_5' + format, path2 +targetName+'_3' + format,
+                    path2 + targetName+'_1' + format, path2 + targetName+'_6' + format,
+                    path2 + targetName+'_2' + format, path2 + targetName+'_4' + format,
 
                 ],( targetTexture)=>{
 
@@ -294,13 +201,12 @@
                           curBox = 'cube';
                       }
 
-
                       new TWEEN.Tween(camera.position)
                           .to( {
-                              x:tx - 1e-6,
-                              y:ty - 1e-6,
-                              z:tz - 1e-6
-                          } , 800)
+                              x:( curPos.x + tx ) / 2 ,
+                              y:( curPos.y + ty ) / 2 ,
+                              z:( curPos.z + tz ) / 2
+                          } , 600)
                           .easing( TWEEN.Easing.Linear.None)
                           .onUpdate( xhr=>{
 
@@ -316,6 +222,7 @@
                               {
 
                                   cube2.position.set(xhr.x,xhr.y,xhr.z,);
+
                                   cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
                                   cube2.material.uniforms.alpha.value = 1.0 - distance/intersects[0].distance;
 
@@ -335,10 +242,10 @@
                               {
                                   new TWEEN.Tween( cube.position)
                                       .to({
-                                      x:tx,
-                                      y:ty,
-                                      z:tz
-                                    },400)
+                                      x:((targetPos.x+tx)/2 + tx)/2,
+                                      y:((targetPos.y+ty)/2 + ty)/2,
+                                      z:((targetPos.z+tz)/2 + tz)/2
+                                    },600)
                                       .easing( TWEEN.Easing.Linear.None)
                                       .onUpdate( xhr=>{
 
@@ -348,10 +255,10 @@
                               {
                                   new TWEEN.Tween( cube2.position)
                                       .to({
-                                          x:tx,
-                                          y:ty,
-                                          z:tz
-                                      },400)
+                                          x:((targetPos.x+tx)/2 + tx)/2,
+                                          y:((targetPos.y+ty)/2 + ty)/2,
+                                          z:((targetPos.z+tz)/2 + tz)/2
+                                      },600)
                                       .easing( TWEEN.Easing.Linear.None)
                                       .onUpdate( xhr=>{
 
@@ -364,7 +271,7 @@
                                       x:targetPos.x - 1e-6,
                                       y:targetPos.y - 1e-6,
                                       z:targetPos.z - 1e-6
-                                  } , 400)
+                                  } , 600)
                                   .easing( TWEEN.Easing.Linear.None)
                                   .onUpdate( xhr=>{
 

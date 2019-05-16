@@ -2,8 +2,199 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a0ae27-b7b7-465c-b955-6a665927744f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/001_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/001_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/001_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/001_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/001_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/001_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/002_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/002_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/002_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/002_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/002_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/002_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/003_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/003_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/003_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/003_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/003_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/003_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/004_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/004_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/004_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/004_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/004_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/004_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/005_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/005_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/005_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/005_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/005_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/005_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/006_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/006_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/006_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/006_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/006_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/006_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/007_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/007_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/007_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/007_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/007_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/007_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/008_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/008_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/008_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/008_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/008_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/008_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/009_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/009_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/009_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/009_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/009_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/009_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/010_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/010_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/010_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/010_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/010_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/010_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/011_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/011_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/011_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/011_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/011_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/011_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/012_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/012_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/012_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/012_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/012_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/012_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/013_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/013_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/013_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/013_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/013_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/013_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/014_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/014_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/014_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/014_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/014_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/014_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/015_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/015_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/015_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/015_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/015_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/015_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/016_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/016_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/016_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/016_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/016_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/016_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/017_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/017_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/017_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/017_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/017_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/017_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/018_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/018_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/018_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/018_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/018_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/018_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/019_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/019_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/019_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/019_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/019_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/019_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/020_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/020_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/020_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/020_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/020_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/020_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/021_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/021_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/021_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/021_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/021_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/021_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/022_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/022_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/022_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/022_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/022_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/022_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/023_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/023_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/023_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/023_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/023_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/023_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/024_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/024_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/024_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/024_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/024_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/024_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/025_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/025_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/025_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/025_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/025_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/025_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/026_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/026_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/026_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/026_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/026_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/026_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/027_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/027_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/027_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/027_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/027_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/027_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/028_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/028_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/028_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/028_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/028_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/028_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/029_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/029_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/029_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/029_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/029_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/029_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/030_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/030_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/030_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/030_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/030_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/030_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/031_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/031_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/031_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/031_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/031_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/031_6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/032_1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/032_2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/032_3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/032_4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/032_5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/large-model/space4/1k/032_6.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/large-model/space4/path.json" afterPath="$PROJECT_DIR$/large-model/space4/path.json" />
       <change beforePath="$PROJECT_DIR$/pano.js" afterPath="$PROJECT_DIR$/pano.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,12 +212,10 @@
       <file leaf-file-name="pano.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pano.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+            <state relative-caret-position="445">
+              <caret line="260" column="40" lean-forward="false" selection-start-line="260" selection-start-column="40" selection-end-line="260" selection-end-column="40" />
               <folding>
-                <element signature="e#7754#8355#0" expanded="false" />
-                <element signature="e#12179#12395#0" expanded="false" />
-                <element signature="e#12522#13976#0" expanded="false" />
+                <element signature="e#8948#9164#0" expanded="false" />
                 <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
               </folding>
             </state>
@@ -36,8 +225,8 @@
       <file leaf-file-name="three.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/three.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="11151" column="13" lean-forward="false" selection-start-line="11151" selection-start-column="13" selection-end-line="11151" selection-end-column="13" />
+            <state relative-caret-position="177">
+              <caret line="601" column="8" lean-forward="false" selection-start-line="601" selection-start-column="8" selection-end-line="601" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -59,6 +248,7 @@
       <find>curPoint</find>
       <find>onProgress</find>
       <find>textInfoGroup</find>
+      <find>path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,6 +319,13 @@
               <item name="large-model" type="462c0819:PsiDirectoryNode" />
               <item name="space4" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="VT-Pano" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VT-Pano" type="462c0819:PsiDirectoryNode" />
+              <item name="large-model" type="462c0819:PsiDirectoryNode" />
+              <item name="space4" type="462c0819:PsiDirectoryNode" />
+              <item name="1k" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -194,17 +391,18 @@
       <workItem from="1557884238799" duration="652000" />
       <workItem from="1557885898649" duration="6449000" />
       <workItem from="1557898735897" duration="15250000" />
-      <workItem from="1557968461579" duration="21763000" />
+      <workItem from="1557968461579" duration="25953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49136000" />
+    <option name="totallyTimeSpent" value="53326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -333,9 +531,7 @@
         <state relative-caret-position="4239">
           <caret line="157" column="12" lean-forward="false" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
           <folding>
-            <element signature="e#7754#8355#0" expanded="false" />
-            <element signature="e#12179#12395#0" expanded="false" />
-            <element signature="e#12522#13976#0" expanded="false" />
+            <element signature="e#8948#9164#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
@@ -386,9 +582,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding>
-            <element signature="e#7754#8355#0" expanded="false" />
-            <element signature="e#12179#12395#0" expanded="false" />
-            <element signature="e#12522#13976#0" expanded="false" />
+            <element signature="e#8948#9164#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
@@ -439,9 +633,7 @@
         <state relative-caret-position="297">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#7754#8355#0" expanded="false" />
-            <element signature="e#12179#12395#0" expanded="false" />
-            <element signature="e#12522#13976#0" expanded="false" />
+            <element signature="e#8948#9164#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
@@ -613,20 +805,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/three.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="11151" column="13" lean-forward="false" selection-start-line="11151" selection-start-column="13" selection-end-line="11151" selection-end-column="13" />
+        <state relative-caret-position="177">
+          <caret line="601" column="8" lean-forward="false" selection-start-line="601" selection-start-column="8" selection-end-line="601" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pano.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+        <state relative-caret-position="445">
+          <caret line="260" column="40" lean-forward="false" selection-start-line="260" selection-start-column="40" selection-end-line="260" selection-end-column="40" />
           <folding>
-            <element signature="e#7754#8355#0" expanded="false" />
-            <element signature="e#12179#12395#0" expanded="false" />
-            <element signature="e#12522#13976#0" expanded="false" />
+            <element signature="e#8948#9164#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
