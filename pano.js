@@ -6,7 +6,9 @@
  * */
 
  let jsonURL = './large-model/space4/VT_Model_info.json ';
+ let pathURL = './large-model/space4/path.json ';
  let jsonObj = '';
+ let pathObj = '';
  function reqData( complete ) {
 
      fetch(jsonURL)
@@ -16,8 +18,23 @@
 
  }
 
+ function reqPath( complete ) {
+
+     fetch( pathURL )
+         .then( response => response.json())
+         .then( data => complete( data ))
+         .catch( err => console.log( err ))
+ }
+
+
  let camera,scene,renderer,control,raycaster=new THREE.Raycaster();
  let curPoint =0 ,historyPoint,targetPoint;
+
+ let targetName = '001';
+
+ let targetTexture ='';
+
+ let loader = new THREE.CubeTextureLoader( );
 
  let curPos = new THREE.Vector3( 0,0,0 ),targetPos= new THREE.Vector3( 0,0,0 ),historyPos = new THREE.Vector3( 0,0,0 );
 
@@ -56,7 +73,7 @@
      let cubeGeo  = new THREE.CubeGeometry( 6,6,6 );
      let cubeGeo2 = new THREE.CubeGeometry( 6,6,6 );
 
-     cubeText = new THREE.CubeTextureLoader( ).load(
+     cubeText = loader.load(
 
          [
              path + '512_001_5_00' + format, path + '512_001_3_00' + format,
@@ -66,7 +83,7 @@
 
      );
 
-   let  cubeText4 = new THREE.CubeTextureLoader( ).load(
+   let  cubeText4 = loader.load(
 
          [
              path + '512_004_5_00' + format, path + '512_004_3_00' + format,
@@ -95,7 +112,7 @@
 
       uniforms2 = {
 
-         U_MainTexture:{ value :  cubeText4  },
+         U_MainTexture:{ value :  cubeText  },
          alpha:{ value:0.0 }
 
      };
@@ -127,9 +144,10 @@
      scene.add( textInfoGroup );
      curBox = 'cube';
 
-     console.log( textInfoGroup );
+     hideAllText();
 
-     textInfoGroup.children[curPoint].visible = false;
+     viewText();
+
 
      document.getElementById('WebGL-output').appendChild(renderer.domElement);
 
@@ -145,15 +163,21 @@
          let intersects = raycaster.intersectObjects( textInfoGroup.children );
          if( intersects.length > 0)
          {
-             console.log( intersects[0] );
 
-             intersects[0].object.visible = false;
-             let tx =( intersects[0].point.x - curPos.x ) / 2.0 + curPos.x;
-             let ty =( intersects[0].point.y - curPos.y ) / 2.0 + curPos.y;
-             let tz =( intersects[0].point.z - curPos.z ) / 2.0 + curPos.z;
+             hideAllText();
+            // intersects[0].object.visible = false;
+             let tx =( intersects[0].point.x + curPos.x ) / 2.0 ;
+             let ty =( intersects[0].point.y + curPos.y ) / 2.0 ;
+             let tz =( intersects[0].point.z + curPos.z ) / 2.0 ;
              targetPos.x   = intersects[0].point.x;
              targetPos.y   = intersects[0].point.y;
              targetPos.z   = intersects[0].point.z;
+
+             historyPoint = curPoint;
+             targetPoint = parseInt( intersects[0].object.userData.point );
+
+             targetName = intersects[0].object.userData.num;
+
 
             /*       mat4.lookAt( curPos,targetPos,up );
 
@@ -177,68 +201,144 @@
                  .easing(TWEEN.Easing.Linear.None)
                  .start();*/
 
-             new TWEEN.Tween(camera.position)
-                 .to( {
-                     x:tx,
-                     y:ty,
-                     z:tz
-                 } , 1000)
-                 .easing( TWEEN.Easing.Linear.None)
-                 .onUpdate( xhr=>{
-
-                     cube2.position.set(xhr.x,xhr.y,xhr.z,)
-                     control.target.set(
-                         xhr.x + camera.getWorldDirection( vec3 ).x*1e-6 ,
-                         xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
-                         xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
-                     )
-                    let distance = intersects[0].point.distanceTo( xhr )
-
-                     cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
-                     cube2.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
-
-                 } )
-                 .onComplete( ()=>{
-
-                     new TWEEN.Tween(camera.position)
-                         .to( {
-                             x:targetPos.x,
-                             y:targetPos.y,
-                             z:targetPos.z
-                         } , 300)
-                         .easing( TWEEN.Easing.Linear.None)
-                         .onUpdate( xhr=>{
-
-                             cube2.position.set(xhr.x,xhr.y,xhr.z,)
-
-                             control.target.set(
-                                 xhr.x + camera.getWorldDirection( vec3 ).x*1e-6,
-                                 xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
-                                 xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
-                             )
-                             let distance = intersects[0].point.distanceTo( xhr )
-                             console.log( distance/intersects[0].distance );
-                             cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
-                             cube2.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
-
-                         } )
-                         .onComplete( ()=>{
-
-                             cube.position.set(camera.position.x,camera.position.y,camera.position.z,);
 
 
-                         })
-                         .start();
+              loader.load(
+                [
+                    path + '512_'+targetName+'_5_00' + format, path + '512_'+targetName+'_3_00' + format,
+                    path + '512_'+targetName+'_1_00' + format, path + '512_'+targetName+'_6_00' + format,
+                    path + '512_'+targetName+'_2_00' + format, path + '512_'+targetName+'_4_00' + format,
+
+                ],( targetTexture)=>{
+
+                      if( cube2.material.uniforms.alpha.value < 0.5 )
+                      {
+                          cube2.material.uniforms.U_MainTexture.value = targetTexture;
+                          curBox = 'cube2';
+                      }else
+                      {
+                          cube.material.uniforms.U_MainTexture.value = targetTexture;
+                          curBox = 'cube';
+                      }
 
 
+                      new TWEEN.Tween(camera.position)
+                          .to( {
+                              x:tx - 1e-6,
+                              y:ty - 1e-6,
+                              z:tz - 1e-6
+                          } , 800)
+                          .easing( TWEEN.Easing.Linear.None)
+                          .onUpdate( xhr=>{
 
 
+                              control.target.set(
+                                  xhr.x + camera.getWorldDirection( vec3 ).x*1e-6 ,
+                                  xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
+                                  xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
+                              )
+                              let distance = intersects[0].point.distanceTo( xhr )
+
+                              if( curBox ==='cube2' )
+                              {
+
+                                  cube2.position.set(xhr.x,xhr.y,xhr.z,);
+                                  cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
+                                  cube2.material.uniforms.alpha.value = 1.0 - distance/intersects[0].distance;
+
+                              }else
+                              {
+                                  cube.position.set(xhr.x,xhr.y,xhr.z,);
+                                  cube2.material.uniforms.alpha.value = distance/intersects[0].distance ;
+                                  cube.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
+
+                              }
+
+                          } )
+                          .onComplete( ()=>{
+                              console.log(cube.position);
+
+                              if(curBox ==='cube2' )
+                              {
+                                  new TWEEN.Tween( cube.position)
+                                      .to({
+                                      x:tx,
+                                      y:ty,
+                                      z:tz
+                                    },400)
+                                      .easing( TWEEN.Easing.Linear.None)
+                                      .onUpdate( xhr=>{
+
+                                      })
+                                      .start();
+                              }else
+                              {
+                                  new TWEEN.Tween( cube2.position)
+                                      .to({
+                                          x:tx,
+                                          y:ty,
+                                          z:tz
+                                      },400)
+                                      .easing( TWEEN.Easing.Linear.None)
+                                      .onUpdate( xhr=>{
+
+                                      })
+                                      .start();
+                              }
+
+                              new TWEEN.Tween(camera.position)
+                                  .to( {
+                                      x:targetPos.x - 1e-6,
+                                      y:targetPos.y - 1e-6,
+                                      z:targetPos.z - 1e-6
+                                  } , 400)
+                                  .easing( TWEEN.Easing.Linear.None)
+                                  .onUpdate( xhr=>{
+
+                                      control.target.set(
+                                          xhr.x + camera.getWorldDirection( vec3 ).x*1e-6,
+                                          xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
+                                          xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
+                                      )
+                                      let distance = intersects[0].point.distanceTo( xhr )
+
+                                      if( curBox ==='cube2' )
+                                      {
+                                          cube2.position.set(xhr.x,xhr.y,xhr.z,);
+                                          cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
+                                          cube2.material.uniforms.alpha.value = 1.0 -  distance/intersects[0].distance ;
+                                      }else
+                                      {
+                                          cube.position.set(xhr.x,xhr.y,xhr.z,)
+                                         // cube2.position.set(xhr.x/2 -tx,xhr.y/2 - tx,xhr.z/5,);
+                                          cube2.material.uniforms.alpha.value = distance/intersects[0].distance ;
+                                          cube.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
+                                      }
+
+                                  } )
+                                  .onComplete( ()=>{
+
+                                      if( curBox ==='cube2' )
+                                          cube.position.set(camera.position.x,camera.position.y,camera.position.z,);
+                                      else
+                                          cube2.position.set(camera.position.x,camera.position.y,camera.position.z,);
 
 
-                 } )
-                 .start();
+                                      curPos.copy( targetPos );
+                                      curPoint = targetPoint;
 
+                                      lookAtCamera();
 
+                                      viewText();
+
+                                  })
+                                  .start();
+
+                          } )
+                          .start();
+
+                }
+            );
 
 
          }
@@ -309,6 +409,49 @@
 
 }
 
+ function lookAtCamera() {
+
+     if( !textInfoGroup || !camera ) return ;
+
+     for( let i=0;i<textInfoGroup.children.length;i++)
+     {
+         textInfoGroup.children[i].lookAt( camera.position );
+     }
+
+ }
+
+ function hideAllText() {
+     if( !textInfoGroup ) return ;
+     for( let i=0;i<textInfoGroup.children.length;i++)
+     {
+         textInfoGroup.children[i].visible =false;
+     }
+ }
+
+ function viewText() {
+
+     if(!pathObj  || !jsonObj  ) return ;
+
+     for(let i = 1 ;i< jsonObj.transform[0].length+1;i++)
+     {
+         if(pathObj.autoPath[curPoint+1][i] )
+         {
+             if( pathObj.autoPath[curPoint+1][i].length ==2 )
+                 textInfoGroup.children[pathObj.autoPath[curPoint+1][i][1] -1 ].visible = true;
+         }
+     }
+
+ }
+
+ function showAllText() {
+     if( !textInfoGroup ) return ;
+     for( let i=0;i<textInfoGroup.children.length;i++)
+     {
+         textInfoGroup.children[i].visible =true;
+     }
+
+ }
+
 
  function animate() {
 
@@ -323,35 +466,44 @@
 
  reqData( data=>{
 
-     console.log( data );
      jsonObj = data;
-     for( let i= 0 ;i< jsonObj.transform.length;i++)
-     {
-         for( let j=0;j< jsonObj.transform[i].length; j++)
+
+     reqPath( pathData =>{
+
+         pathObj = pathData;
+
+
+         for( let i= 0 ;i< jsonObj.transform.length;i++)
          {
-            let plane = getTextPlan( {
-                textInfo:`${j+1}`,
-            });
+             for( let j=0;j< jsonObj.transform[i].length; j++)
+             {
+                 let plane = getTextPlan( {
+                     textInfo:`${j+1}`,
+                 });
 
-            plane.position.set(
-                jsonObj.transform[i][j].matrix[3] - jsonObj.transform[0][0].matrix[3],
-                jsonObj.transform[i][j].matrix[7] - jsonObj.transform[0][0].matrix[7],
-                jsonObj.transform[i][j].matrix[11] - jsonObj.transform[0][0].matrix[11],
-            );
+                 plane.position.set(
+                     jsonObj.transform[i][j].matrix[3] - jsonObj.transform[0][0].matrix[3],
+                     jsonObj.transform[i][j].matrix[7] - jsonObj.transform[0][0].matrix[7],
+                     jsonObj.transform[i][j].matrix[11] - jsonObj.transform[0][0].matrix[11],
+                 );
 
-            plane.lookAt( 0,0,0 );
-            plane.userData = {
-                num:`00${j+1}`,
-                name:jsonObj.name
-            };
+                 plane.lookAt( 0,0,0 );
+                 plane.userData = {
+                     num:`${j+1}`.padStart(3,'0'),
+                     name:jsonObj.name,
+                     point:`${j}`,
+                 };
 
-            textInfoGroup.add(plane);
+                 textInfoGroup.add(plane);
+
+             }
 
          }
 
-     }
+         init();
 
-     init();
+     })
+
  } );
 
 

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a0ae27-b7b7-465c-b955-6a665927744f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/Tween.js" afterPath="$PROJECT_DIR$/js/Tween.js" />
+      <change beforePath="$PROJECT_DIR$/large-model/space4/path.json" afterPath="$PROJECT_DIR$/large-model/space4/path.json" />
       <change beforePath="$PROJECT_DIR$/pano.js" afterPath="$PROJECT_DIR$/pano.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="three.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/three.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59454">
-              <caret line="2202" column="8" lean-forward="false" selection-start-line="2202" selection-start-column="8" selection-end-line="2202" selection-end-column="8" />
+            <state relative-caret-position="166">
+              <caret line="3333" column="8" lean-forward="false" selection-start-line="3333" selection-start-column="8" selection-end-line="3333" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -52,18 +50,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="path.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/large-model/space4/path.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="397">
+              <caret line="59" column="7" lean-forward="false" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -91,19 +79,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pano.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pano.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pano.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="157" column="12" lean-forward="false" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
+            <state relative-caret-position="3443">
+              <caret line="505" column="5" lean-forward="false" selection-start-line="505" selection-start-column="5" selection-end-line="505" selection-end-column="5" />
               <folding>
-                <element signature="e#4502#5103#0" expanded="false" />
-                <element signature="e#5173#5273#0" expanded="false" />
-                <element signature="e#5367#5999#0" expanded="false" />
-                <element signature="e#6036#7421#0" expanded="false" />
-                <element signature="e#6123#6282#0" expanded="false" />
+                <element signature="e#4894#5495#0" expanded="false" />
+                <element signature="e#9319#9535#0" expanded="false" />
+                <element signature="e#9662#11116#0" expanded="false" />
                 <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="path.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/large-model/space4/path.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,6 +134,13 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>curPoint</find>
+      <find>onProgress</find>
+      <find>textInfoGroup</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -272,12 +275,12 @@
       <workItem from="1557884238799" duration="652000" />
       <workItem from="1557885898649" duration="6449000" />
       <workItem from="1557898735897" duration="15250000" />
-      <workItem from="1557968461579" duration="259000" />
+      <workItem from="1557968461579" duration="12746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27632000" />
+    <option name="totallyTimeSpent" value="40119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -335,7 +338,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -410,11 +415,9 @@
         <state relative-caret-position="4239">
           <caret line="157" column="12" lean-forward="false" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
           <folding>
-            <element signature="e#4502#5103#0" expanded="false" />
-            <element signature="e#5173#5273#0" expanded="false" />
-            <element signature="e#5367#5999#0" expanded="false" />
-            <element signature="e#6036#7421#0" expanded="false" />
-            <element signature="e#6123#6282#0" expanded="false" />
+            <element signature="e#4894#5495#0" expanded="false" />
+            <element signature="e#9319#9535#0" expanded="false" />
+            <element signature="e#9662#11116#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
@@ -465,11 +468,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding>
-            <element signature="e#4502#5103#0" expanded="false" />
-            <element signature="e#5173#5273#0" expanded="false" />
-            <element signature="e#5367#5999#0" expanded="false" />
-            <element signature="e#6036#7421#0" expanded="false" />
-            <element signature="e#6123#6282#0" expanded="false" />
+            <element signature="e#4894#5495#0" expanded="false" />
+            <element signature="e#9319#9535#0" expanded="false" />
+            <element signature="e#9662#11116#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
@@ -520,11 +521,9 @@
         <state relative-caret-position="297">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#4502#5103#0" expanded="false" />
-            <element signature="e#5173#5273#0" expanded="false" />
-            <element signature="e#5367#5999#0" expanded="false" />
-            <element signature="e#6036#7421#0" expanded="false" />
-            <element signature="e#6123#6282#0" expanded="false" />
+            <element signature="e#4894#5495#0" expanded="false" />
+            <element signature="e#9319#9535#0" expanded="false" />
+            <element signature="e#9662#11116#0" expanded="false" />
             <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
           </folding>
         </state>
@@ -638,33 +637,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/three.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59454">
-          <caret line="2202" column="8" lean-forward="false" selection-start-line="2202" selection-start-column="8" selection-end-line="2202" selection-end-column="8" />
+        <state relative-caret-position="397">
+          <caret line="59" column="7" lean-forward="false" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pano.js">
+    <entry file="file://$PROJECT_DIR$/js/three.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="157" column="12" lean-forward="false" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
-          <folding>
-            <element signature="e#4502#5103#0" expanded="false" />
-            <element signature="e#5173#5273#0" expanded="false" />
-            <element signature="e#5367#5999#0" expanded="false" />
-            <element signature="e#6036#7421#0" expanded="false" />
-            <element signature="e#6123#6282#0" expanded="false" />
-            <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="166">
+          <caret line="3333" column="8" lean-forward="false" selection-start-line="3333" selection-start-column="8" selection-end-line="3333" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -674,6 +658,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pano.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3443">
+          <caret line="505" column="5" lean-forward="false" selection-start-line="505" selection-start-column="5" selection-end-line="505" selection-end-column="5" />
+          <folding>
+            <element signature="e#4894#5495#0" expanded="false" />
+            <element signature="e#9319#9535#0" expanded="false" />
+            <element signature="e#9662#11116#0" expanded="false" />
+            <element signature="n#!!block;n#getTextPlan#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
