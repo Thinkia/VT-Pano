@@ -52,6 +52,9 @@
 
  let path = './large-model/space4/512/', format='.jpg';
 
+ let cubeLen = 6;
+
+ let len = cubeLen/2;
 
  function init() {
 
@@ -70,8 +73,9 @@
      control.target.set( 0,0,-0.1 );
      control.rotateSpeed = -1;
 
-     let cubeGeo  = new THREE.CubeGeometry( 6,6,6 );
-     let cubeGeo2 = new THREE.CubeGeometry( 6,6,6 );
+     let cubeGeo  = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
+     let cubeGeo2 = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
+
 
      cubeText = loader.load(
 
@@ -79,16 +83,6 @@
              path + '512_001_5_00' + format, path + '512_001_3_00' + format,
              path + '512_001_1_00' + format, path + '512_001_6_00' + format,
              path + '512_001_2_00' + format, path + '512_001_4_00' + format,
-         ]
-
-     );
-
-   let  cubeText4 = loader.load(
-
-         [
-             path + '512_004_5_00' + format, path + '512_004_3_00' + format,
-             path + '512_004_1_00' + format, path + '512_004_6_00' + format,
-             path + '512_004_2_00' + format, path + '512_004_4_00' + format,
          ]
 
      );
@@ -129,8 +123,87 @@
 
          });
 
-     var cube = new THREE.Mesh(cubeGeo, shaderMaterial);
-     var cube2 = new THREE.Mesh(cubeGeo2, shaderMaterial2);
+     let cube = new THREE.Mesh(cubeGeo, shaderMaterial);
+
+/*
+
+     let vertices = [];
+
+     // front
+     vertices[vertices.length]  =  new THREE.Vector3(-len,len,len);
+     vertices[vertices.length]  =  new THREE.Vector3(0,len,len);
+     vertices[vertices.length]  =  new THREE.Vector3(len,len,len);
+     vertices[vertices.length]  =  new THREE.Vector3(-len,0,len);
+     vertices[vertices.length]  =  new THREE.Vector3(0,0,len);
+     vertices[vertices.length]  =  new THREE.Vector3(len,0,len);
+     vertices[vertices.length]  =  new THREE.Vector3(-len,-len,len);
+     vertices[vertices.length]  =  new THREE.Vector3(0,-len,len);
+     vertices[vertices.length]  =  new THREE.Vector3(len,-len,len);
+
+     //mid
+     vertices[vertices.length]  =  new THREE.Vector3(-len,len,0);
+     vertices[vertices.length]  =  new THREE.Vector3(0,len,0);
+     vertices[vertices.length]  =  new THREE.Vector3(len,len,0);
+     vertices[vertices.length]  =  new THREE.Vector3(-len,0,0);
+     vertices[vertices.length]  =  new THREE.Vector3(0,0,0);
+     vertices[vertices.length]  =  new THREE.Vector3(len,0,0);
+     vertices[vertices.length]  =  new THREE.Vector3(-len,-len,0);
+     vertices[vertices.length]  =  new THREE.Vector3(0,-len,0);
+     vertices[vertices.length]  =  new THREE.Vector3(len,-len,0);
+
+     // bot
+     vertices[vertices.length]  =  new THREE.Vector3(-len,len,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(0,len,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(len,len,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(-len,0,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(0,0,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(len,0,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(-len,-len,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(0,-len,-len);
+     vertices[vertices.length]  =  new THREE.Vector3(len,-len,-len);
+
+     cube.geometry.vertices = vertices;
+
+     let faces = [];
+     //front
+     faces[faces.length] = new THREE.Face3(0,6,8 );
+     faces[faces.length] = new THREE.Face3(0,8,2 );
+
+     // back
+     faces[faces.length] = new THREE.Face3(26,24,18 );
+     faces[faces.length] = new THREE.Face3(26,18,20 );
+
+     //left
+     faces[faces.length] = new THREE.Face3(18,24,0 );
+     faces[faces.length] = new THREE.Face3(24, 6, 0 );
+
+     // right
+     faces[faces.length] = new THREE.Face3(2,8,26 );
+     faces[faces.length] = new THREE.Face3(2,26,20 );
+
+     // top
+     faces[faces.length] = new THREE.Face3(18,0,2 );
+     faces[faces.length] = new THREE.Face3(18,2,20 );
+
+     //bot
+     faces[faces.length] = new THREE.Face3(24,26,8 );
+     faces[faces.length] = new THREE.Face3(8,6,24 );*/
+
+     //front
+
+  /*   faces[faces.length] = new THREE.Face3(0,3,4 );
+     faces[faces.length] = new THREE.Face3(0,4,1 );
+     faces[faces.length] = new THREE.Face3(1,4,5 );
+     faces[faces.length] = new THREE.Face3(1,5,2 );
+
+     faces[faces.length] = new THREE.Face3(3,6,7 );
+     faces[faces.length] = new THREE.Face3(3,7,4 );
+     faces[faces.length] = new THREE.Face3(4,7,8 );
+     faces[faces.length] = new THREE.Face3(4,8,5 );*/
+
+
+     let cube2 = new THREE.Mesh(cubeGeo2, shaderMaterial2);
+
 
      // cube.scale.x = -1;
      scene.add(cube2);
