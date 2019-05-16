@@ -18,7 +18,16 @@
 
  let camera,scene,renderer,control,raycaster=new THREE.Raycaster();
  let curPoint =0 ,historyPoint,targetPoint;
+
+ let curPos = new THREE.Vector3( 0,0,0 ),targetPos= new THREE.Vector3( 0,0,0 ),historyPos = new THREE.Vector3( 0,0,0 );
+
+ let mat4 = new THREE.Matrix4( );
+
+ let quat = new THREE.Quaternion( );
+
  let curBox,textInfoGroup=new THREE.Group(),vec3= new THREE.Vector3( 0,0,0 );
+
+ let up = new THREE.Vector3( 0,1,0 );
 
  let uniforms;
  let uniforms2;
@@ -29,7 +38,7 @@
 
  function init() {
 
-     camera = new THREE.PerspectiveCamera( 50,window.innerWidth / window.innerHeight , 0.01,6.1 );
+     camera = new THREE.PerspectiveCamera( 50,window.innerWidth / window.innerHeight , 0.01,8 );
 
      scene = new THREE.Scene();
 
@@ -57,6 +66,16 @@
 
      );
 
+   let  cubeText4 = new THREE.CubeTextureLoader( ).load(
+
+         [
+             path + '512_004_5_00' + format, path + '512_004_3_00' + format,
+             path + '512_004_1_00' + format, path + '512_004_6_00' + format,
+             path + '512_004_2_00' + format, path + '512_004_4_00' + format,
+         ]
+
+     );
+
 
      uniforms = {
          U_MainTexture: { value: cubeText },
@@ -74,10 +93,10 @@
              transparent: true
          });
 
-     let uniforms2 = {
+      uniforms2 = {
 
-         U_MainTexture:{ value :  cubeText  },
-         alpha:{ value:1.0 }
+         U_MainTexture:{ value :  cubeText4  },
+         alpha:{ value:0.0 }
 
      };
 
@@ -127,6 +146,101 @@
          if( intersects.length > 0)
          {
              console.log( intersects[0] );
+
+             intersects[0].object.visible = false;
+             let tx =( intersects[0].point.x - curPos.x ) / 2.0 + curPos.x;
+             let ty =( intersects[0].point.y - curPos.y ) / 2.0 + curPos.y;
+             let tz =( intersects[0].point.z - curPos.z ) / 2.0 + curPos.z;
+             targetPos.x   = intersects[0].point.x;
+             targetPos.y   = intersects[0].point.y;
+             targetPos.z   = intersects[0].point.z;
+
+            /*       mat4.lookAt( curPos,targetPos,up );
+
+
+             quat.setFromRotationMatrix( mat4  );
+
+             if(camera.quaternion.y*quat.y<0){
+                 quat.x = -quat.x;
+                 quat.y = -quat.y;
+                 quat.z = -quat.z;
+                 quat.w = -quat.w;
+             }
+
+             new TWEEN.Tween( camera.quaternion )
+                 .to({
+                     x:quat.x,
+                     y:quat.y,
+                     z:quat.z,
+                     w:quat.w
+                 },1000)
+                 .easing(TWEEN.Easing.Linear.None)
+                 .start();*/
+
+             new TWEEN.Tween(camera.position)
+                 .to( {
+                     x:tx,
+                     y:ty,
+                     z:tz
+                 } , 1000)
+                 .easing( TWEEN.Easing.Linear.None)
+                 .onUpdate( xhr=>{
+
+                     cube2.position.set(xhr.x,xhr.y,xhr.z,)
+                     control.target.set(
+                         xhr.x + camera.getWorldDirection( vec3 ).x*1e-6 ,
+                         xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
+                         xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
+                     )
+                    let distance = intersects[0].point.distanceTo( xhr )
+
+                     cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
+                     cube2.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
+
+                 } )
+                 .onComplete( ()=>{
+
+                     new TWEEN.Tween(camera.position)
+                         .to( {
+                             x:targetPos.x,
+                             y:targetPos.y,
+                             z:targetPos.z
+                         } , 300)
+                         .easing( TWEEN.Easing.Linear.None)
+                         .onUpdate( xhr=>{
+
+                             cube2.position.set(xhr.x,xhr.y,xhr.z,)
+
+                             control.target.set(
+                                 xhr.x + camera.getWorldDirection( vec3 ).x*1e-6,
+                                 xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
+                                 xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
+                             )
+                             let distance = intersects[0].point.distanceTo( xhr )
+                             console.log( distance/intersects[0].distance );
+                             cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
+                             cube2.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
+
+                         } )
+                         .onComplete( ()=>{
+
+                             cube.position.set(camera.position.x,camera.position.y,camera.position.z,);
+
+
+                         })
+                         .start();
+
+
+
+
+
+
+                 } )
+                 .start();
+
+
+
+
          }
 
      })
@@ -198,7 +312,7 @@
 
  function animate() {
 
-  //  TWEEN.update();
+    TWEEN.update();
 
     rend();
     requestAnimationFrame( animate );
