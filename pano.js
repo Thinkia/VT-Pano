@@ -9,30 +9,13 @@
  let pathURL = './large-model/space4/path.json ';
  let jsonObj = '';
  let pathObj = '';
- function reqData( complete ) {
-
-     fetch(jsonURL)
-         .then( response => response.json())
-         .then( data => complete( data ))
-         .catch( err => console.log( err ))
-
- }
-
- function reqPath( complete ) {
-
-     fetch( pathURL )
-         .then( response => response.json())
-         .then( data => complete( data ))
-         .catch( err => console.log( err ))
- }
-
 
  let camera,scene,renderer,control,raycaster=new THREE.Raycaster();
  let curPoint =0 ,historyPoint,targetPoint;
+ let cube,cube2;
+
 
  let targetName = '001';
-
- let targetTexture ='';
 
  let loader = new THREE.CubeTextureLoader( );
 
@@ -50,106 +33,27 @@
  let uniforms2;
  let cubeText;
 
- let path  = './large-model/space4/512/', format='.jpg';
+ let path  = './large-model/space4/512/';
+ let path2 ='./large-model/space4/1k/';
 
- let path2 ='./large-model/space4/1k/'
+ let format='.jpg';
 
  let cubeLen = 6;
 
  let len = cubeLen/2;
 
- let time1 = 400;
- let time2 = 400;
+ let time1 = 500;
+ let time2 = 500;
 
  function init() {
 
-     camera = new THREE.PerspectiveCamera( 50,window.innerWidth / window.innerHeight , 0.01,8 );
+     initPlane();
 
-     scene = new THREE.Scene();
-
-     renderer = new THREE.WebGLRenderer( );
-
-     renderer.setSize( window.innerWidth, window.innerHeight );
-
-     renderer.sortObjects = false;
-
-     control = new THREE.OrbitControls( camera );
-
-     control.target.set( 0,0,-0.1 );
-     control.rotateSpeed = -1;
-
-     let cubeGeo  = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
-     let cubeGeo2 = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
-
-
-     cubeText = loader.load(
-
-         [
-             path2 + '001_5' + format, path2 + '001_3' + format,
-             path2 + '001_1' + format, path2 + '001_6' + format,
-             path2 + '001_2' + format, path2 + '001_4' + format,
-         ]
-
-     );
-
-
-     uniforms = {
-         U_MainTexture: { value: cubeText },
-         alpha:{ value: 1.0 }
-     };
-
-     let shaderMaterial = new THREE.ShaderMaterial(
-         {
-             side: THREE.BackSide,
-             // side:THREE.DoubleSide,
-             uniforms: uniforms,
-             vertexShader: document.getElementById('vertexshader').textContent,
-             fragmentShader: document.getElementById(('fragmentshader')).textContent,
-             depthTest: false,
-             transparent: true
-         });
-
-      uniforms2 = {
-
-         U_MainTexture:{ value :  cubeText  },
-         alpha:{ value:0.0 }
-
-     };
-
-     var shaderMaterial2 = new THREE.ShaderMaterial(
-         {
-             side: THREE.BackSide,
-             // side:THREE.DoubleSide,
-             uniforms: uniforms2,
-             vertexShader: document.getElementById('vertexshader').textContent,
-             fragmentShader: document.getElementById(('fragmentshader')).textContent,
-             depthTest: false,
-             transparent: true
-
-         });
-
-     let cube = new THREE.Mesh(cubeGeo, shaderMaterial);
-
-
-     let cube2 = new THREE.Mesh(cubeGeo2, shaderMaterial2);
-
-
-     // cube.scale.x = -1;
-     scene.add(cube2);
-
-    // cube2.scale.x = -1;
-     scene.add(cube);
-
-     cube2.material.uniforms.alpha.value = 0.0;
-     cube.material.uniforms.alpha.value = 1.0;
-
-     scene.add( textInfoGroup );
-     curBox = 'cube';
+     initScene();
 
      hideAllText();
 
      viewText();
-
 
      document.getElementById('WebGL-output').appendChild(renderer.domElement);
 
@@ -176,6 +80,8 @@
              targetPos.z   = intersects[0].point.z;
 
              historyPoint = curPoint;
+             historyPos.copy( curPos );
+
              targetPoint = parseInt( intersects[0].object.userData.point );
 
              targetName = intersects[0].object.userData.num;
@@ -216,8 +122,6 @@
                           .easing( TWEEN.Easing.Linear.None)
                           .onUpdate( xhr=>{
 
-
-
                               control.target.set(
                                   xhr.x + camera.getWorldDirection( vec3 ).x*1e-6 ,
                                   xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
@@ -228,22 +132,18 @@
 
                               if( curBox ==='cube2' )
                               {
-
                                   cube2.position.set(xhr.x,xhr.y,xhr.z,);
                                   cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
                                   cube2.material.uniforms.alpha.value = 1.0 - distance/intersects[0].distance;
-
                               }else
                               {
                                   cube.position.set(xhr.x,xhr.y,xhr.z,);
                                   cube2.material.uniforms.alpha.value = distance/intersects[0].distance ;
                                   cube.material.uniforms.alpha.value = 1.0 -distance/intersects[0].distance;
-
                               }
 
                           } )
                           .onComplete( ()=>{
-
 
                               if(curBox ==='cube2' )
                               {
@@ -287,7 +187,7 @@
                                           xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
                                           xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
                                       )
-                                      let distance = intersects[0].point.distanceTo( xhr )
+                                      let distance = intersects[0].point.distanceTo( xhr );
 
                                       if( curBox ==='cube2' )
                                       {
@@ -438,17 +338,150 @@
 
  }
 
-
  function animate() {
 
     TWEEN.update();
-
     rend();
     requestAnimationFrame( animate );
 
  }
 
 
+ function reqData( complete ) {
+
+    fetch(jsonURL)
+        .then( response => response.json())
+        .then( data => complete( data ))
+        .catch( err => console.log( err ))
+
+ }
+
+ function reqPath( complete ) {
+
+    fetch( pathURL )
+        .then( response => response.json())
+        .then( data => complete( data ))
+        .catch( err => console.log( err ))
+ }
+
+ function initPlane() {
+
+     if( !jsonObj ) return ;
+
+     for( let i= 0 ;i< jsonObj.transform.length;i++)
+     {
+         for( let j=0;j< jsonObj.transform[i].length; j++)
+         {
+             let plane = getTextPlan( {
+                 textInfo:`${j+1}`,
+             });
+
+             plane.position.set(
+                 jsonObj.transform[i][j].matrix[3] - jsonObj.transform[0][0].matrix[3],
+                 jsonObj.transform[i][j].matrix[7] - jsonObj.transform[0][0].matrix[7],
+                 jsonObj.transform[i][j].matrix[11] - jsonObj.transform[0][0].matrix[11],
+             );
+
+             plane.lookAt( 0,0,0 );
+             plane.userData = {
+                 num:`${j+1}`.padStart(3,'0'),
+                 name:jsonObj.name,
+                 point:`${j}`,
+             };
+
+             textInfoGroup.add(plane);
+
+         }
+
+     }
+
+ }
+
+ function initScene( ){
+
+     camera = new THREE.PerspectiveCamera( 50,window.innerWidth / window.innerHeight , 0.01,8 );
+
+     scene = new THREE.Scene();
+
+     renderer = new THREE.WebGLRenderer( );
+
+     renderer.setSize( window.innerWidth, window.innerHeight );
+
+     renderer.sortObjects = false;
+
+     control = new THREE.OrbitControls( camera );
+
+     control.target.set( 0,0,-0.1 );
+     control.rotateSpeed = -1;
+
+     let cubeGeo  = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
+     let cubeGeo2 = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
+
+
+     cubeText = loader.load(
+
+         [
+             path2 + '001_5' + format, path2 + '001_3' + format,
+             path2 + '001_1' + format, path2 + '001_6' + format,
+             path2 + '001_2' + format, path2 + '001_4' + format,
+         ]
+
+     );
+
+
+     uniforms = {
+         U_MainTexture: { value: cubeText },
+         alpha:{ value: 1.0 }
+     };
+
+     let shaderMaterial = new THREE.ShaderMaterial(
+         {
+             side: THREE.BackSide,
+             // side:THREE.DoubleSide,
+             uniforms: uniforms,
+             vertexShader: document.getElementById('vertexshader').textContent,
+             fragmentShader: document.getElementById(('fragmentshader')).textContent,
+             depthTest: false,
+             transparent: true
+         });
+
+     uniforms2 = {
+
+         U_MainTexture:{ value :  cubeText  },
+         alpha:{ value:0.0 }
+
+     };
+
+     let shaderMaterial2 = new THREE.ShaderMaterial(
+         {
+             side: THREE.BackSide,
+             // side:THREE.DoubleSide,
+             uniforms: uniforms2,
+             vertexShader: document.getElementById('vertexshader').textContent,
+             fragmentShader: document.getElementById(('fragmentshader')).textContent,
+             depthTest: false,
+             transparent: true
+
+         });
+
+     cube = new THREE.Mesh(cubeGeo, shaderMaterial);
+
+     cube2 = new THREE.Mesh(cubeGeo2, shaderMaterial2);
+
+
+     // cube.scale.x = -1;
+     scene.add(cube2);
+
+     // cube2.scale.x = -1;
+     scene.add(cube);
+
+     cube2.material.uniforms.alpha.value = 0.0;
+     cube.material.uniforms.alpha.value = 1.0;
+
+     scene.add( textInfoGroup );
+     curBox = 'cube';
+
+ }
 
  reqData( data=>{
 
@@ -457,39 +490,9 @@
      reqPath( pathData =>{
 
          pathObj = pathData;
-
-
-         for( let i= 0 ;i< jsonObj.transform.length;i++)
-         {
-             for( let j=0;j< jsonObj.transform[i].length; j++)
-             {
-                 let plane = getTextPlan( {
-                     textInfo:`${j+1}`,
-                 });
-
-                 plane.position.set(
-                     jsonObj.transform[i][j].matrix[3] - jsonObj.transform[0][0].matrix[3],
-                     jsonObj.transform[i][j].matrix[7] - jsonObj.transform[0][0].matrix[7],
-                     jsonObj.transform[i][j].matrix[11] - jsonObj.transform[0][0].matrix[11],
-                 );
-
-                 plane.lookAt( 0,0,0 );
-                 plane.userData = {
-                     num:`${j+1}`.padStart(3,'0'),
-                     name:jsonObj.name,
-                     point:`${j}`,
-                 };
-
-                 textInfoGroup.add(plane);
-
-             }
-
-         }
-
          init();
 
      })
-
  } );
 
 
