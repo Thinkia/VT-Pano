@@ -58,6 +58,9 @@
 
  let len = cubeLen/2;
 
+ let time1 = 400;
+ let time2 = 400;
+
  function init() {
 
      camera = new THREE.PerspectiveCamera( 50,window.innerWidth / window.innerHeight , 0.01,8 );
@@ -209,23 +212,24 @@
                               x:( curPos.x + tx ) / 2 ,
                               y:( curPos.y + ty ) / 2 ,
                               z:( curPos.z + tz ) / 2
-                          } , 600)
+                          } , time1)
                           .easing( TWEEN.Easing.Linear.None)
                           .onUpdate( xhr=>{
+
 
 
                               control.target.set(
                                   xhr.x + camera.getWorldDirection( vec3 ).x*1e-6 ,
                                   xhr.y + camera.getWorldDirection( vec3 ).y*1e-6,
                                   xhr.z + camera.getWorldDirection( vec3 ).z*1e-6,
-                              )
-                              let distance = intersects[0].point.distanceTo( xhr )
+                              );
+
+                              let distance = intersects[0].point.distanceTo( xhr );
 
                               if( curBox ==='cube2' )
                               {
 
                                   cube2.position.set(xhr.x,xhr.y,xhr.z,);
-
                                   cube.material.uniforms.alpha.value = distance/intersects[0].distance ;
                                   cube2.material.uniforms.alpha.value = 1.0 - distance/intersects[0].distance;
 
@@ -248,7 +252,7 @@
                                       x:((targetPos.x+tx)/2 + tx)/2,
                                       y:((targetPos.y+ty)/2 + ty)/2,
                                       z:((targetPos.z+tz)/2 + tz)/2
-                                    },600)
+                                    },time2)
                                       .easing( TWEEN.Easing.Linear.None)
                                       .onUpdate( xhr=>{
 
@@ -261,7 +265,7 @@
                                           x:((targetPos.x+tx)/2 + tx)/2,
                                           y:((targetPos.y+ty)/2 + ty)/2,
                                           z:((targetPos.z+tz)/2 + tz)/2
-                                      },600)
+                                      },time2)
                                       .easing( TWEEN.Easing.Linear.None)
                                       .onUpdate( xhr=>{
 
@@ -274,7 +278,7 @@
                                       x:targetPos.x - 1e-6,
                                       y:targetPos.y - 1e-6,
                                       z:targetPos.z - 1e-6
-                                  } , 600)
+                                  } , time2)
                                   .easing( TWEEN.Easing.Linear.None)
                                   .onUpdate( xhr=>{
 
@@ -319,7 +323,6 @@
 
                           } )
                           .start();
-
                 }
             );
 
