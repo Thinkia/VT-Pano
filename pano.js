@@ -236,7 +236,7 @@
 
                           } )
                           .onComplete( ()=>{
-                              console.log(cube.position);
+
 
                               if(curBox ==='cube2' )
                               {
