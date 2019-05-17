@@ -191,12 +191,15 @@
 
                 ],( targetTexture)=>{
 
+
                       if( cube2.material.uniforms.alpha.value < 0.5 )
                       {
+                          cube2.material.uniforms.U_MainTexture.value.dispose();
                           cube2.material.uniforms.U_MainTexture.value = targetTexture;
                           curBox = 'cube2';
                       }else
                       {
+                          cube.material.uniforms.U_MainTexture.value.dispose();
                           cube.material.uniforms.U_MainTexture.value = targetTexture;
                           curBox = 'cube';
                       }
