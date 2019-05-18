@@ -45,6 +45,7 @@
  let time1 = 500;
  let time2 = 500;
 
+
  function init() {
 
      initPlane();
@@ -411,7 +412,7 @@
 
      control = new THREE.OrbitControls( camera );
 
-     control.target.set( 0,0,-0.1 );
+     control.target.set( 0,0,-0.000001 );
      control.rotateSpeed = -1;
 
      let cubeGeo  = new THREE.CubeGeometry( cubeLen,cubeLen,cubeLen );
@@ -486,6 +487,20 @@
  reqData( data=>{
 
      jsonObj = data;
+
+     for( let i =0 ; i<jsonObj.transform[0].length;i++)
+     {
+         debugger;
+         
+         loader.load(
+             [
+                 path2 + '001_5' + format, path2 + '001_3' + format,
+                 path2 + '001_1' + format, path2 + '001_6' + format,
+                 path2 + '001_2' + format, path2 + '001_4' + format,
+             ]);
+     }
+
+
 
      reqPath( pathData =>{
 
